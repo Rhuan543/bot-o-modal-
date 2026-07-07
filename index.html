@@ -1,0 +1,132 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Digital Seguro - Dicas de Segurança para a Terceira Idade</title>
+    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome para ícones legíveis -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Vínculo com o arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col pb-24" id="app-body">
+
+    <!-- Barra de Acessibilidade Superior -->
+    <div class="bg-slate-800 text-white py-2 px-4 sticky top-0 z-40 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <span class="text-sm font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-universal-access text-xl text-blue-400"></i>
+                Ferramentas de Acessibilidade:
+            </span>
+            <div class="flex items-center gap-3">
+                <!-- Controle de Tamanho de Fonte -->
+                <div class="flex items-center bg-slate-700 rounded-lg p-1 gap-1">
+                    <button onclick="alterarFonte(-2)" class="px-3 py-1 bg-slate-600 hover:bg-slate-500 rounded font-bold text-xs transition-all" title="Diminuir letra" aria-label="Diminuir tamanho da letra">A-</button>
+                    <button onclick="resetarFonte()" class="px-3 py-1 bg-slate-600 hover:bg-slate-500 rounded font-bold text-sm transition-all" title="Tamanho normal" aria-label="Tamanho normal da letra">Normal</button>
+                    <button onclick="alterarFonte(2)" class="px-3 py-1 bg-slate-600 hover:bg-slate-500 rounded font-bold text-lg transition-all" title="Aumentar letra" aria-label="Aumentar tamanho da letra">A+</button>
+                </div>
+                <!-- Toggle Alto Contraste -->
+                <button onclick="toggleAltoContraste()" class="bg-yellow-400 hover:bg-yellow-300 text-slate-900 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all text-sm" aria-label="Alternar modo de alto contraste para leitura">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                    <span>Contraste</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-8 px-4 text-center shadow-lg transition-colors" id="main-header">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block p-3 bg-white/10 rounded-full mb-3">
+                <i class="fa-solid fa-shield-halved text-5xl text-yellow-300"></i>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">Guia Digital Seguro</h1>
+            <p class="text-lg md:text-2xl text-blue-100 max-w-2xl mx-auto font-medium">
+                Aprenda de forma simples e segura a usar a internet sem cair em armadilhas!
+            </p>
+        </div>
+    </header>
+
+    <!-- Mensagem de Boas-Vindas e Ajuda de Voz Geral -->
+    <section class="max-w-4xl mx-auto mt-8 px-4 w-full">
+        <div class="bg-blue-50 border-l-8 border-blue-600 p-6 rounded-r-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-card">
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-blue-900 mb-1 flex items-center gap-2">
+                    👋 Olá, que bom ver você aqui!
+                </h2>
+                <p class="text-lg text-slate-700 font-medium">
+                    Preparamos dicas muito fáceis para você navegar com tranquilidade. Se preferir ouvir, clique no botão de áudio de cada dica para que eu leia para você!
+                </p>
+            </div>
+            <button onclick="ouvirTexto('Olá! Que bom ver você aqui. Preparamos dicas muito fáceis para você navegar com tranquilidade. Use os botões de áudio azuis em cada dica para ouvir a leitura do texto.')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-bold flex items-center gap-2 shadow-md shrink-0 transition-all text-lg" aria-label="Ouvir mensagem de boas-vindas">
+                <i class="fa-solid fa-volume-high text-xl"></i>
+                Ouvir Introdução
+            </button>
+        </div>
+    </section>
+
+ (Grid de Cards Grandes e Acessíveis) -->
+    <main class="max-w-6xl mx-auto px-4 mt-8 w-full flex-grow">
+        <h2 class="text-3xl font-extrabold text-slate-800 mb-6 border-b-4 border-blue-600 pb-2 inline-block">
+             Dicas Importantes de Segurança
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Card 1: Senhas -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-slate-100 p-6 flex flex-col justify-between hover:shadow-xl transition-all bg-card">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="bg-amber-100 text-amber-700 p-4 rounded-full text-3xl shrink-0">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+                        <h3 class="text-2xl font-bold text-slate-800">1. Cuidado com as suas Senhas</h3>
+                    </div>
+                    <p class="text-lg text-slate-700 mb-4 font-medium leading-relaxed" id="texto-dica-1">
+                        Evite usar o seu ano de nascimento, nome de filhos ou sequências fáceis como "12345" para as suas senhas. 
+                        <strong>Dica de ouro:</strong> Misture letras maiúsculas, minúsculas, números e símbolos (como o @ ou #). Anote em um caderninho físico bem guardado em casa se tiver medo de esquecer!
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-100">
+                    <button onclick="ouvirTextoDica('texto-dica-1')" class="bg-blue-100 hover:bg-blue-200 text-blue-800 px-4 py-2.5 rounded-lg font-bold text-base flex items-center gap-2 transition-all">
+                        <i class="fa-solid fa-volume-high"></i> Ouvir Dica
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scripts JavaScript para funcionamento da página -->
+    <script>
+        // Funções para controle de fonte e contraste devem ser adicionadas aqui
+        function ouvirTexto(texto) {
+            const voo = new SpeechSynthesisUtterance(texto);
+            voo.lang = 'pt-BR';
+            window.speechSynthesis.speak(voo);
+        }
+
+        function ouvirTextoDica(id) {
+            const texto = document.getElementById(id).innerText;
+            ouvirTexto(texto);
+        }
+
+        function toggleAltoContraste() {
+            document.getElementById('app-body').classList.toggle('alto-contrast');
+        }
+
+        let tamanhoAtual = 16;
+        function alterarFonte(delta) {
+            tamanhoAtual += delta;
+            document.body.style.fontSize = tamanhoAtual + 'px';
+        }
+
+        function resetarFonte() {
+            tamanhoAtual = 16;
+            document.body.style.fontSize = tamanhoAtual + 'px';
+        }
+    </script>
+</body>
+</html>

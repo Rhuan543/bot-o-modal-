@@ -1,0 +1,53 @@
+ 
+        /* Estilos customizados para acessibilidade e transicoes suaves */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Classe de Alto Contraste */
+        .alto-contraste {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+        .alto-contraste .bg-card {
+            background-color: #121212 !important;
+            border: 3px solid #ffff00 !important;
+            color: #ffffff !important;
+        }
+        .alto-contraste .text-gray-600, 
+        .alto-contraste .text-gray-700,
+        .alto-contraste .text-blue-800 {
+            color: #ffffff !important;
+        }
+        .alto-contraste .bg-blue-50,
+        .alto-contraste .bg-blue-100,
+        .alto-contraste .bg-emerald-50,
+        .alto-contraste .bg-red-50 {
+            background-color: #1a1a1a !important;
+            border: 2px solid #ffffff !important;
+        }
+        .alto-contraste button:not(.btn-emergencia) {
+            background-color: #ffff00 !important;
+            color: #000000 !important;
+            border: 2px solid #ffffff !important;
+        }
+        .alto-contraste button:hover:not(.btn-emergencia) {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        /* Pulse para o Botão de Emergência chamativo */
+        @keyframes pulse-red {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+        }
+        .btn-pulse {
+            animation: pulse-red 2s infinite;
+        }
+
+        /* Foco de acessibilidade visível */
+        *:focus {
+            outline: 4px solid #3b82f6 !important;
+            outline-offset: 2px;
+        }
